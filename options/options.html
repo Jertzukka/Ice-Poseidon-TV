@@ -3,7 +3,7 @@
 <head>
     <title>Ice Poseidon TV</title>
     <link href="options.css" rel="stylesheet" type="text/css">
-    <script src="../external/jquery.min.js"></script>
+    <script src="../external/jquery.js"></script>
     <script src="options.js"></script>
 </head>
 <body>
@@ -41,9 +41,13 @@
                 <td>Enable BTTV emotes:</td>
                 <td><input type="checkbox" name="emotesBTTV" checked></td>
             </tr>
-            <tr class="paddingBottom">
+             <tr>
                 <td>Enable Twitch subscriber emotes:</td>
                 <td><input type="checkbox" name="emotesSub" checked></td>
+            </tr>
+            <tr class="paddingBottom">
+                <td>Enable Ice's old subscriber emotes:</td>
+                <td><input type="checkbox" name="emotesIce" checked></td>
             </tr>
             <tr>
                 <td>Enabled emote channels (seperated by comma):</td>
@@ -64,6 +68,10 @@
             <tr>
                 <td>Show deleted messages:</td>
                 <td><input type="checkbox" name="showDeletedMessages"></td>
+            </tr>
+            <tr>
+                <td>BTTV style mention highlight:</td>
+                <td><input type="checkbox" name="mentionHighlight"></td>
             </tr>
         </table>
     </form>
