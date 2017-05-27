@@ -1,5 +1,6 @@
 import Emote from './emote';
 import PageCheck from './pageCheck';
+import emoteAutoComplete from './emoteAutoComplete';
 import { isNode } from './util';
 
 export const DISALLOWED_CHARS = ['\\', ':', '/', '&', "'", '"', '?', '!', '#'],
@@ -12,10 +13,11 @@ const onNewPageLoad = function() {
 
     $('[class^="iptv-"]').remove();
 
+
     if (options !== null && options['redirectToYTGaming'] === true) {
         setTimeout(PageCheck.youtubeGaming, 2500);
     }
-
+    emoteAutoComplete.emoteTabComplete();
     PageCheck.livestreamPage();
 };
 
