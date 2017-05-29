@@ -129,6 +129,7 @@ export default class emoteAutoComplete
                     startStr = fullMessage.substring(0, savePos); // Starting part
                     endStr = fullMessage.substring(savePos+selectedWord.length); // Ending part
                 }
+                if(savePos == 0 && endStr != "") return; // Prevent doubletabs
                 if(foundEmotes.length == 0) return; // No matching emotes found
                 if(state > foundEmotes.length-2) state = -1; // Loop if at the end of the array
                 state++
